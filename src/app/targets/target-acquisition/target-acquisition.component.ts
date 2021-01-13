@@ -9,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
     <mat-radio-group
     aria-labelledby="radio-group-label"
     class="radio-group"
-    [(ngModel)]="selectedTargetAcq">
+    [(ngModel)]="selectedTargetAcq"
+    [ngModelOptions]="{standalone: true}"
+    >
     <mat-radio-button class="rad-button" *ngFor="let targetAcq of targetAcqs" [value]="targetAcq">
       {{targetAcq}}
     </mat-radio-button>
@@ -20,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
 
   styles: [
     `
-    .rad-button {width: 100%; margin-top: }
+    .rad-button {width: 100%; margin-top: 10px; margin-bottom: 10px;}
     #target-acquisition {
       margin-top: 20px;
       margin-left: 5px;

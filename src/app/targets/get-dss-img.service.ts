@@ -43,6 +43,8 @@ export class GetDssImgService {
     c -> compression
     v -> version
     s -> save
+    
+    example: "https://archive.stsci.edu/cgi-bin/dss_search?v=poss2ukstu_red&r=00+42+44.35&d=%2B41+16+08.6&e=J2000&h=15.0&w=15.0&f=gif&c=none&fov=NONE&v3="
   */
   let imageUrl = 'http://archive.stsci.edu/cgi-bin/dss_search'
   return imageUrl

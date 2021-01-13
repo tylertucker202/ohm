@@ -9,14 +9,15 @@ import { Component, OnInit } from '@angular/core';
     <mat-radio-group
     aria-labelledby="radio-group-label"
     class="radio-group"
-    [(ngModel)]="selectedTargetType">
+    [(ngModel)]="selectedTargetType"
+    [ngModelOptions]="{standalone: true}"
+    >
     <mat-radio-button class="rad-button" *ngFor="let targetType of targetTypes" [value]="targetType">
       {{targetType}}
     </mat-radio-button>
     </mat-radio-group>
-
   <mat-form-field>
-    <mat-label>Other</mat-label>
+    <mat-label >Other</mat-label>
     <input matInput type="text" value={{otherType}} placeholder="Specify here">
   </mat-form-field>
   </form>
@@ -24,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
   `,
   styles: [
     `
-    .rad-button {width: 100%;}
+    .rad-button {width: 100%; margin-top: 10px; margin-bottom: 10px } 
     #target-type {
       margin-top: 20px;
       margin-left: 5px;

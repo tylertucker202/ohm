@@ -1,17 +1,25 @@
 import { GetDssImgService } from './../get-dss-img.service';
 import { Component, OnInit } from '@angular/core';
+
+
 @Component({
   selector: 'app-view-target',
   template: `
+  <div id="dss-show" class="mat-elevation-z8">
   <img [src]="imageToShow"
       alt="Place image title"
       *ngIf="!isImageLoading; else noImageFound">
   <ng-template #noImageFound>
-      <img src="fallbackImage.png" alt="Fallbackimage">
+      <img src="assets/deathstar.jpeg" alt="Fallbackimage">
   </ng-template>
-
+  </div>
   `,
   styles: [
+    `
+    #dss-show {
+      margin-top: 20px;
+    }
+    `
   ]
 })
 export class ViewTargetComponent implements OnInit {

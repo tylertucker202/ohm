@@ -9,7 +9,7 @@ export class AppComponent {
   title = 'ohm';
   public selectedIndex: number
 
-  on_tab_click(event: any): void {
-    console.log(event)
+  on_tab_click(tabIndex: number): void {
+    console.log(tabIndex)
   }
 }

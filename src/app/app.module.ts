@@ -14,7 +14,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TargetDefinitionComponent } from './targets/target-definition/target-definition.component';
 import { TargetAcquisitionComponent } from './targets/target-acquisition/target-acquisition.component';
 import { TargetTypeComponent } from './targets/target-type/target-type.component';
-import { ViewTargetComponent } from './targets/view-target/view-target.component'
+import { ViewTargetComponent } from './targets/view-target/view-target.component';
+import { TableTargetComponent } from './targets/table-target/table-target.component'
+import { FormsModule } from '@angular/forms';
+import { DialogBoxComponent } from './targets/dialog-box/dialog-box.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,10 +29,13 @@ import { ViewTargetComponent } from './targets/view-target/view-target.component
     TargetDefinitionComponent,
     TargetAcquisitionComponent,
     TargetTypeComponent,
-    ViewTargetComponent
+    ViewTargetComponent,
+    TableTargetComponent,
+    DialogBoxComponent
   ],
   imports: [
     HttpClientModule,
+    FormsModule,
     MaterialModule,
     BrowserModule,
     AppRoutingModule,

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-targets',
   template: `
-    <mat-grid-list cols="12" gutterSize="0px" rowHeight="500px">
+    <mat-grid-list cols="12" gutterSize="0px" rowHeight="520px">
             <mat-grid-tile
             [colspan]="2"
             [rowspan]="1">
@@ -25,7 +25,7 @@ import { Component, OnInit } from '@angular/core';
                 <app-view-target></app-view-target>
             </mat-grid-tile>
         </mat-grid-list>
-    <app-table></app-table>
+    <app-table-target></app-table-target>
   `,
   styles: [ 
     `

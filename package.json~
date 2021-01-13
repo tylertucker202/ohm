@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "nodemon server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -28,7 +28,6 @@
     "@angular/platform-browser": "^11.0.7",
     "@angular/platform-browser-dynamic": "~11.0.1",
     "@angular/router": "~11.0.1",
-    "@cquiroz/aladin-lite": "^0.2.4",
     "@types/node": "^12.11.1",
     "enhanced-resolve": "^3.3.0",
     "express": "^4.17.1",

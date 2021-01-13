@@ -26,11 +26,13 @@
       
       // table export module
       import { MatTableExporterModule } from 'mat-table-exporter'
+      import { DragDropModule } from '@angular/cdk/drag-drop'
       
       @NgModule({
         declarations: [],
         exports: [
           MatButtonModule,
+          DragDropModule,
           MatSlideToggleModule,
           MatDividerModule,
           MatIconModule,
@@ -56,6 +58,7 @@
         imports: [
           CommonModule,
           MatButtonModule,
+          DragDropModule,
           MatSlideToggleModule,
           MatDividerModule,
           MatIconModule,

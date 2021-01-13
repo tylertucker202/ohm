@@ -1,7 +1,8 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
+import { Component, OnInit, ViewChild} from '@angular/core'
 import { MatPaginator } from '@angular/material/paginator'
-import { MatTableDataSource } from '@angular/material/table'
+import { MatTableDataSource, MatTable } from '@angular/material/table'
 import { MatSort } from '@angular/material/sort'
+import { CdkDragDrop, moveItemInArray } from '@angular/cdk/drag-drop';
 
 export interface PeriodicElement {
   name: string;
@@ -31,13 +32,12 @@ export class TableComponent implements OnInit {
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator
   @ViewChild(MatSort, {static: true}) sort: MatSort
+  @ViewChild('table') table: MatTable<PeriodicElement>
 
   constructor() { }
-  public columns: string[] = ['position', 'name', 'weight', 'symbol']
+  public displayedColumns: string[] = ['position', 'name', 'weight', 'symbol']
   public dataSource: any   
-  public platform_number: string
-  public statParamKey: string
-
+ 
   ngOnInit(): void {
     this.dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA)
     this.dataSource.data = ELEMENT_DATA
@@ -49,6 +49,13 @@ export class TableComponent implements OnInit {
     filterValue = filterValue.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
     this.dataSource.filter = filterValue;
+  }
+
+  dropTable(event: CdkDragDrop<PeriodicElement[]>) {
+    // const prevIndex = this.dataSource.data.findIndex((d) => d === event.item.data);
+    // console.log(event, prevIndex)
+    moveItemInArray(this.dataSource.data, event.previousIndex, event.currentIndex);
+    this.table.renderRows();
   }
 
 }
