@@ -1,13 +1,15 @@
 {
   "name": "ohm",
   "version": "0.0.0",
+  "main": "main.js",
   "scripts": {
     "ng": "ng",
     "start": "nodemon server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "ng build --prod",
+    "start:electron": "ng build --base-href ./ && electron ."
   },
   "engines": {
     "node": "10.19.0",
@@ -42,5 +44,7 @@
     "typescript": "~4.0.2",
     "zone.js": "~0.10.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "electron": "^11.2.0"
+  }
 }

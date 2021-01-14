@@ -50,6 +50,9 @@ export class TableTargetComponent implements OnInit {
       this.table.renderRows()
     })
 
+    this.rowService.get_local_data().subscribe(somthing => {
+      console.log(somthing)
+    })
   }
   public apply_filter(filterValue: string) {
     filterValue = filterValue.trim(); // Remove whitespace
