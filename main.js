@@ -13,7 +13,7 @@ const win = new BrowserWindow({
 // Load the index.html of the app 
 // From the dist folder which is created 
 // After running the build command 
-win.loadFile('dist/index.html') 
+win.loadFile('dist/ohm/index.html') 
 
 // Open the DevTools. 
 win.webContents.openDevTools() 

@@ -575,5 +575,5 @@ export const getDefs = [
             "semid": "2020B_K999"
         }
     ],
-    "Observations": []
+    "Observations": [] }
 ]
